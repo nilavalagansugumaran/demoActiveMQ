@@ -13,4 +13,10 @@ public class MyReceiverComponent {
 
         log.debug("received simple message >>> {}" , message);
     }
+
+    @JmsListener(destination = "employeeMessageBox")
+    public void receiverSimpleMessage(Employee employee) {
+
+        log.debug("received employee message >>> {}" , employee);
+    }
 }

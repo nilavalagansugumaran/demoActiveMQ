@@ -17,4 +17,10 @@ public class MySenderComponent {
         log.debug("sending simple message >>> {}" , message);
         jmsTemplate.convertAndSend("simpleMessageBox", message);
     }
+
+    public void sendEmpMessage(Employee employee) {
+
+        log.debug("sending employee message >>> {}" , employee);
+        jmsTemplate.convertAndSend("employeeMessageBox", employee);
+    }
 }
